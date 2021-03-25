@@ -11,9 +11,24 @@ const app = new Vue(
                 "https://wallpapercave.com/wp/wp5226887.jpg",
                 "https://wallpapercave.com/uwp/uwp118964.jpeg"
             ],
+            timer: null,
+            currentIndex: 0
         },
-        methods: {
-            
+        methods: {            
+            next: function() {
+                this.currentIndex += 1;
+                
+                if (this.currentIndex == this.images.length) {
+                    this.currentIndex = 0;
+                }
+            },
+            prev: function() {
+                this.currentIndex -= 1;
+                
+                if (this.currentIndex < 0) {
+                    this.currentIndex = this.images.length - 1;
+                }
+            },
         }
     }
 );

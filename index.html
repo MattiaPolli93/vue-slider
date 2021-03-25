@@ -15,12 +15,12 @@
 
             <!-- Left arrow -->
             <div class="slider-prev">
-                <i class="fas fa-chevron-left"></i>
+                <i @click="prev" class="fas fa-chevron-left"></i>
             </div>
 
             <!-- Image slider -->
-            <div class="slider-images">
-                <img v-bind:src="images[0]" alt="Image - Slider">
+            <div class="slider-images">                
+                <img v-bind:src="images[currentIndex % images.length]" alt="Image - Slider">
                 <div class="slider-bullets">
                     <i class="fas fa-circle"></i>
                 </div>
@@ -28,7 +28,7 @@
 
             <!-- Right arrow -->
             <div class="slider-next">
-                <i class="fas fa-chevron-right"></i>
+                <i @click="next" class="fas fa-chevron-right"></i>
             </div>
         </div>
     </div>
