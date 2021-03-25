@@ -11,7 +11,6 @@ const app = new Vue(
                 "https://wallpapercave.com/wp/wp5226887.jpg",
                 "https://wallpapercave.com/uwp/uwp118964.jpeg"
             ],
-            timer: null,
             currentIndex: 0
         },
         methods: {            
