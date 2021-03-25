@@ -12,7 +12,6 @@
 <body>
     <div id="app" class="wrapper flex">
         <div class="slider flex">
-
             <!-- Left arrow -->
             <div class="slider-prev">
                 <i @click="prev" class="fas fa-chevron-left"></i>
@@ -22,7 +21,7 @@
             <div class="slider-images">                
                 <img v-bind:src="images[currentIndex]" alt="Image - Slider">
                 <div class="slider-bullets">
-                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-circle" v-for="(image, index) in images" :class="(currentIndex == index) ? 'active' : ''" @click="currentIndex = index"></i>
                 </div>
             </div>
 

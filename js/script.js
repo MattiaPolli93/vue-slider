@@ -11,9 +11,9 @@ const app = new Vue(
                 "https://wallpapercave.com/wp/wp5226887.jpg",
                 "https://wallpapercave.com/uwp/uwp118964.jpeg"
             ],
-            currentIndex: 0
+            currentIndex: 0,
         },
-        methods: {            
+        methods: {
             next: function() {
                 this.currentIndex += 1;
                 
@@ -27,7 +27,7 @@ const app = new Vue(
                 if (this.currentIndex < 0) {
                     this.currentIndex = this.images.length - 1;
                 }
-            },
+            }
         }
     }
 );
