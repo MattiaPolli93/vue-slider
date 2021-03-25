@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/style.css">
     <title>Vue Slider</title>
 </head>
 <body>
-    
+    <div id="app" class="wrapper flex">
+        <div class="slider flex">
+
+            <!-- Left arrow -->
+            <div class="slider-prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+
+            <!-- Image slider -->
+            <div class="slider-images">
+                <img v-bind:src="images[0]" alt="Image - Slider">
+                <div class="slider-bullets">
+                    <i class="fas fa-circle"></i>
+                </div>
+            </div>
+
+            <!-- Right arrow -->
+            <div class="slider-next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/script.js"></script>
 </body>
