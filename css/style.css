@@ -10,11 +10,19 @@
 }
 
 .wrapper {
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-image: url("https://cdn.wallpapersafari.com/59/33/d5Hc7t.jpg");
     background-position: center;
+}
+
+.wrapper h3 {
+    margin-top: 40px;
+    font-size: 70px;
+    font-style: italic;
+    letter-spacing: 3px;
 }
 
 /* Slider */
@@ -23,8 +31,10 @@
     align-items: center;
     width: 700px;
     height: 400px;
+    margin-top: 100px;
 }
 
+/* Images */
 .slider-images {
     position: relative;
     height: 100%;
@@ -50,21 +60,26 @@
     font-size: 25px;
     margin: 0 5px;
     cursor: pointer;
-    color: #c4e2ff;
 }
 
 /* Left - Right arrows */
+.slider-prev i,
+.slider-next i {
+    font-size: 50px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.wrapper h3,
+.slider-bullets i,
+.slider-prev i,
+.slider-next i {
+    color: #c4e2ff;
+}
+
 .slider-next i:hover,
 .slider-prev i:hover,
 .slider-bullets i:hover,
 .slider-bullets i.active {
     color: #135caf;
-}
-
-.slider-prev i,
-.slider-next i {
-    font-size: 50px;
-    color: #fff;
-    margin: 0 20px;
-    cursor: pointer;
 }
